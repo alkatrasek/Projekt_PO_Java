@@ -1,4 +1,4 @@
-package application;
+package restauracja;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
