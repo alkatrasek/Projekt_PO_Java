@@ -1,4 +1,41 @@
 .root
 {
+	-fx-background-color: #999999;
+}
+
+.layoutMain
+{
 	
+}
+
+.layoutSala
+{
+	-fx-background-color: #DDDDDD;
+}
+
+.layoutKuchniaInfo
+{
+	-fx-background-color: #BBBBBB;
+	-fx-spacing:10;
+	-fx-padding:10;
+}
+
+.layoutKuchniaInfo .button
+{
+	-fx-background-color: #999999;
+}
+
+.menu-bar
+{
+	-fx-background-color: #888888;
+}
+
+.menu .label
+{
+	-fx-text-fill: white;
+}
+
+.menu-item .label
+{
+	-fx-text-fill: black;
 }
