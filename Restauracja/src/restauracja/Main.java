@@ -24,7 +24,7 @@ public class Main extends Application
 		try
 		{
 			BorderPane layoutMain = new BorderPane();
-			Scene sceneMain = new Scene(layoutMain,800,400);
+			Scene sceneMain = new Scene(layoutMain,800,350);
 			GridPane layoutSala = new GridPane();
 			BorderPane layoutStol = new BorderPane();
 			VBox layoutKuchniaInfo = new VBox();
