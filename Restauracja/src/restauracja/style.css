@@ -25,6 +25,11 @@
 	-fx-background-color: #999999;
 }
 
+.layoutSala .button
+{
+	-fx-background-color: #87CEFA;
+}
+
 .menu-bar
 {
 	-fx-background-color: #888888;

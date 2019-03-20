@@ -24,7 +24,7 @@ public class Main extends Application
 		try
 		{
 			BorderPane layoutMain = new BorderPane();
-			Scene sceneMain = new Scene(layoutMain,800,350);
+			Scene sceneMain = new Scene(layoutMain,800,400);
 			GridPane layoutSala = new GridPane();
 			BorderPane layoutStol = new BorderPane();
 			VBox layoutKuchniaInfo = new VBox();
@@ -48,9 +48,13 @@ public class Main extends Application
 			pl.setSelected(true);
 			jezykMenu.getItems().addAll(pl, en, de);
 			
-			//Menu program
+			//Menu program			
 			Menu programMenu = new Menu("Program");
-			programMenu.getItems().add(new MenuItem("Zakoñcz"));
+			MenuItem exitfromapp = new MenuItem("Zakoñcz");
+			programMenu.getItems().add(exitfromapp);
+			exitfromapp.setOnAction(e -> {
+				System.exit(0);
+			});
 			
 			//Menu bar
 			MenuBar menuBar = new MenuBar();
@@ -65,6 +69,40 @@ public class Main extends Application
 			
 			//layoutSala
 			layoutSala.getStyleClass().add("layoutSala");
+			layoutSala.setPadding(new Insets(0, 15, 15, 15));
+			layoutSala.setVgap(60);
+		    layoutSala.setHgap(60);
+		    //flowPane.setPrefWrapLength(210);
+			Button stolik1=new Button("Stolik 1");
+			stolik1.setMinSize(100, 100);
+			stolik1.setMaxSize(100, 100);
+			GridPane.setConstraints(stolik1, 1, 1);
+			Button stolik2=new Button("Stolik 2");
+			stolik2.setMinSize(100, 100);
+			stolik2.setMaxSize(100, 100);
+			GridPane.setConstraints(stolik2, 1, 2);
+			Button stolik3=new Button("Stolik 3");
+			stolik3.setMinSize(100, 100);
+			stolik3.setMaxSize(100, 100);
+			GridPane.setConstraints(stolik3, 1, 3);
+			Button stolik4=new Button("Stolik 4");
+			stolik4.setMinSize(200, 100);
+			stolik4.setMaxSize(200, 100);
+			GridPane.setConstraints(stolik4, 2, 3);
+			Button stolik5=new Button("Stolik 5");
+			stolik5.setMinSize(200, 100);
+			stolik5.setMaxSize(200, 100);
+			GridPane.setConstraints(stolik5, 3, 3);
+			Button stolik6=new Button("Stolik 6");
+			stolik6.setMinSize(200, 100);
+			stolik6.setMaxSize(200, 100);
+			GridPane.setConstraints(stolik6, 4, 3);
+			Button stolik7=new Button("Stolik 7");
+			stolik7.setMinSize(100, 200);
+			stolik7.setMaxSize(100, 200);
+			GridPane.setConstraints(stolik7, 4, 1);
+			layoutSala.getChildren().addAll(stolik1,stolik2,stolik3,stolik4,stolik5,stolik6,stolik7);
+			
 			
 			//Ustawienia layotMain
 			layoutMain.setTop(menuBar);
