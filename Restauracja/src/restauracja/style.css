@@ -13,6 +13,26 @@
 	-fx-background-color: #DDDDDD;
 }
 
+.layoutKuchnia
+{
+	-fx-background-color: #6CE0C5;
+}
+
+.layoutKuchnia .button
+{
+	-fx-background-color: #D85D92;
+}
+
+.layoutEdycjaMenu
+{
+	-fx-background-color: RED;
+}
+
+.layoutEdycjaMenu .button
+{
+	//-fx-background-color: BLUE;
+}
+
 .layoutKuchniaInfo
 {
 	-fx-background-color: #BBBBBB;
@@ -23,6 +43,11 @@
 .layoutKuchniaInfo .button
 {
 	-fx-background-color: #999999;
+}
+
+.layoutEdycjaMenu
+{
+	-fx-background-color: #F0F091;
 }
 
 .layoutSala .button

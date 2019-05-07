@@ -1,5 +1,8 @@
 package restauracja;
 	
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
@@ -11,6 +14,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
@@ -23,18 +27,52 @@ public class Main extends Application
 		primaryStage.setFullScreen(true);
 		try
 		{
+			//Locale currentLocale = new Locale("de", "DE");
+			//messages = ResourceBundle.getBundle("MessagesBundle", currentLocale);
+			Locale locale = new Locale("de", "DE");
+			ResourceBundle exampleBundle = ResourceBundle.getBundle("package.MessageBundle", locale);
+			String msg1 = exampleBundle.getString("greetings");
+			
 			BorderPane layoutMain = new BorderPane();
 			Scene sceneMain = new Scene(layoutMain,800,400);
 			GridPane layoutSala = new GridPane();
+			FlowPane layoutKuchnia = new FlowPane();
+			FlowPane layoutEdycjaMenu = new FlowPane();
+			FlowPane layoutStatystyki = new FlowPane();
 			BorderPane layoutStol = new BorderPane();
 			VBox layoutKuchniaInfo = new VBox();
+			VBox layoutEdycjaMenuPrzyciski = new VBox();
 			sceneMain.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			
 			//Menu narzêdzia
-			Menu narzedziaMenu = new Menu("Narzêdzia");
-			narzedziaMenu.getItems().add(new MenuItem("Statystyki"));
-			narzedziaMenu.getItems().add(new MenuItem("Kuchnia"));
-			narzedziaMenu.getItems().add(new MenuItem("Edycja menu"));
+			Menu narzedziaMenu = new Menu(msg1);
+			//narzedziaMenu.getItems().add(new MenuItem("Statystyki"));
+			//narzedziaMenu.getItems().add(new MenuItem("Kuchnia"));
+			//narzedziaMenu.getItems().add(new MenuItem("Edycja menu"));
+			MenuItem kuchnia_przycisk = new MenuItem("Kuchnia");
+			narzedziaMenu.getItems().add(kuchnia_przycisk);
+			kuchnia_przycisk.setOnAction(e -> {
+				layoutMain.setCenter(layoutKuchnia);
+				layoutMain.setRight(layoutStol);
+			});
+			MenuItem kelner_przycisk = new MenuItem("Kelner");
+			narzedziaMenu.getItems().add(kelner_przycisk);
+			kelner_przycisk.setOnAction(e -> {
+				layoutMain.setCenter(layoutSala);
+				layoutMain.setRight(layoutKuchniaInfo);
+			});
+			MenuItem edycja_menu_przycisk = new MenuItem("Edycja Menu");
+			narzedziaMenu.getItems().add(edycja_menu_przycisk);
+			edycja_menu_przycisk.setOnAction(e -> {
+				layoutMain.setCenter(layoutEdycjaMenu);
+				layoutMain.setRight(layoutEdycjaMenuPrzyciski);
+			});
+			MenuItem statystyki_przycisk = new MenuItem("Statystyki");
+			narzedziaMenu.getItems().add(statystyki_przycisk);
+			statystyki_przycisk.setOnAction(e -> {
+				layoutMain.setRight(layoutStol);
+				layoutMain.setCenter(layoutStatystyki);
+			});
 			
 			//Menu jêzyk
 			Menu jezykMenu = new Menu("Jêzyk");
@@ -66,6 +104,68 @@ public class Main extends Application
 			Button potrawa3=new Button("Rosó³ 3");
 			layoutKuchniaInfo.getStyleClass().add("layoutKuchniaInfo");
 			layoutKuchniaInfo.getChildren().addAll(potrawa1, potrawa2, potrawa3);
+			
+			
+			//Edycja menu -  przyciski dodaj, usuñ, modyfikuj
+			Button modyfikuj_przycisk=new Button("Modyfikuj");
+			modyfikuj_przycisk.setMinSize(200, 100);
+			modyfikuj_przycisk.setMaxSize(200, 100);
+			Button dodaj_przycisk=new Button("Dodaj");
+			dodaj_przycisk.setMinSize(200, 100);
+			dodaj_przycisk.setMaxSize(200, 100);
+			Button usun_przycisk=new Button("Usuñ");
+			usun_przycisk.setMinSize(200, 100);
+			usun_przycisk.setMaxSize(200, 100);
+			layoutEdycjaMenuPrzyciski.getStyleClass().add("layoutEdycjaMenuPrzyciski");
+			layoutEdycjaMenuPrzyciski.getChildren().addAll(dodaj_przycisk, usun_przycisk, modyfikuj_przycisk);
+			
+			//layoutStatystyki
+			layoutKuchnia.getStyleClass().add("layoutStatystyki");
+			//layoutKuchnia.getChildren().addAll(obrazek1);
+			
+			//layoutKuchnia
+			layoutKuchnia.getStyleClass().add("layoutKuchnia");
+			layoutKuchnia.setPadding(new Insets(0, 15, 15, 15));
+		    layoutKuchnia.setHgap(30);
+		    layoutKuchnia.setVgap(30);
+			Button zamowienie1=new Button("Schabowy z ziemniakami i kapust¹");
+			zamowienie1.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie1, 1, 1);
+			Button zamowienie2=new Button("Kebab na ostro z wo³owin¹ na cienkim");
+			zamowienie2.setMinSize(450, 150);
+			Button zamowienie3=new Button("Pomidorówka");
+			//GridPane.setConstraints(zamowienie2, 2, 1);
+			zamowienie3.setMinSize(450, 150);
+			Button zamowienie4=new Button("Ogórkówka");
+			//GridPane.setConstraints(zamowienie2, 3, 1);
+			zamowienie4.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie4, 4, 1);
+			Button zamowienie5=new Button("Æwieræfunciak z serem");
+			zamowienie5.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie5, 5, 1);
+			layoutKuchnia.getChildren().addAll(zamowienie1, zamowienie2, zamowienie3, zamowienie4, zamowienie5);
+			
+			//layoutEdycjaMenu
+			layoutEdycjaMenu.getStyleClass().add("layoutEdycjaMenu");
+			layoutEdycjaMenu.setPadding(new Insets(0, 15, 15, 15));
+		    layoutEdycjaMenu.setHgap(30);
+		    layoutEdycjaMenu.setVgap(30);
+			Button pozycja1=new Button("Schabowy z ziemniakami i kapust¹");
+			pozycja1.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie1, 1, 1);
+			Button pozycja2=new Button("Kebab na ostro z wo³owin¹ na cienkim");
+			pozycja2.setMinSize(450, 150);
+			Button pozycja3=new Button("Pomidorówka");
+			//GridPane.setConstraints(zamowienie2, 2, 1);
+			pozycja3.setMinSize(450, 150);
+			Button pozycja4=new Button("Ogórkówka");
+			//GridPane.setConstraints(zamowienie2, 3, 1);
+			pozycja4.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie4, 4, 1);
+			Button pozycja5=new Button("Æwieræfunciak z serem");
+			pozycja5.setMinSize(450, 150);
+			//GridPane.setConstraints(zamowienie5, 5, 1);
+			layoutEdycjaMenu.getChildren().addAll(pozycja1, pozycja2, pozycja3, pozycja4, pozycja5);
 			
 			//layoutSala
 			layoutSala.getStyleClass().add("layoutSala");
@@ -112,6 +212,7 @@ public class Main extends Application
 			
 			primaryStage.setScene(sceneMain);
 			primaryStage.show();
+			
 		} catch(Exception e)
 		{
 			e.printStackTrace();
