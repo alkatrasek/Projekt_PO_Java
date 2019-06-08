@@ -1,4 +1,4 @@
-package restauracja;
+package restauracja.controllers;
 
 import java.io.IOException;
 
@@ -21,7 +21,7 @@ public class MainController
 
 	public void loadMainScreen()
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("Sala.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/restauracja/Sala.fxml"));
 		Pane sala=null;
 		try
 		{

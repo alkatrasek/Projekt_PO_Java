@@ -1,4 +1,4 @@
-package restauracja;
+package restauracja.controllers;
 
 import javafx.fxml.FXML;
 

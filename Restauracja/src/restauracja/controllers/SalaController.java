@@ -1,4 +1,4 @@
-package restauracja;
+package restauracja.controllers;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ public class SalaController
 	@FXML
 	public void stolikClick()
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("Stolik.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/restauracja/Stolik.fxml"));
 		Pane pane=null;
 		try
 		{
