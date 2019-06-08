@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="listaZamowienTabela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restauracja.controllers.ListaZamowienController">
+  <columns>
+    <TableColumn fx:id="potrawaZamowieniaKolumna" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="54.0" text="Potrawa" />
+    <TableColumn fx:id="stolikZamowieniaKolumna" maxWidth="1.7976931348623157E308" prefWidth="39.0" text="Stolik" />
+      <TableColumn fx:id="miejsceZamowieniaKolumna" maxWidth="1.7976931348623157E308" prefWidth="50.0" text="Miejsce" />
+      <TableColumn fx:id="dostarczZamowieniaKolumna" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="55.0" text="Dostarcz" />
+  </columns>
+</TableView>

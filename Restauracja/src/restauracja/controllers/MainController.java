@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
@@ -28,9 +29,10 @@ public class MainController
 			sala = loader.load();
 		} catch (IOException e)
 		{
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		SalaController salaController = loader.getController();
+		System.out.println();
 		salaController.setMainController(this);
 		setCenterPane(sala);
 	}
@@ -44,6 +46,7 @@ public class MainController
 	public void exit()
 	{
 		Platform.exit();
+		System.exit(0);
 	}
 
 }

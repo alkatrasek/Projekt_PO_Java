@@ -20,7 +20,7 @@ public class Main extends Application
 				root = loader.load();
 			} catch (IOException e)
 			{
-				e.printStackTrace();
+				System.out.println(e);
 			}
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);

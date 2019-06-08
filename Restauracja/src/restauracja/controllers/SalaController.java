@@ -25,6 +25,7 @@ public class SalaController
 		}
 		StolikController stolikController = loader.getController();
 		StolikController.setMainController(mainController);
+		
 		mainController.setCenterPane(pane);
 	}
 
