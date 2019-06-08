@@ -1,13 +1,16 @@
 package struktura;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Osoba
 {
 	int stolik;
 	int miejsce;
-	List<Zamowienie> zamowienia=new ArrayList<Zamowienie>();
+	ObservableList<Zamowienie> zamowienia= FXCollections.observableArrayList();
 	
 	Osoba(int s, int m)
 	{
