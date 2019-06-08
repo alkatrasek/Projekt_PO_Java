@@ -14,7 +14,7 @@ public class SalaController
 	@FXML
 	public void stolikClick()
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/restauracja/Stolik.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Stolik.fxml"));
 		Pane pane=null;
 		try
 		{

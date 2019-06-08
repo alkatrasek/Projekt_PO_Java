@@ -22,7 +22,7 @@ public class MainController
 
 	public void loadMainScreen()
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/restauracja/Sala.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Sala.fxml"));
 		Pane sala=null;
 		try
 		{

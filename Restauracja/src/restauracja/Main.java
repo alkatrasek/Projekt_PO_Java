@@ -13,7 +13,7 @@ public class Main extends Application
 {
 	public void start(Stage primaryStage)
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("MainScreen.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/MainScreen.fxml"));
 			BorderPane root=null;
 			try
 			{
