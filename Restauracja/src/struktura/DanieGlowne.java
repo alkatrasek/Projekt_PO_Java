@@ -2,12 +2,20 @@ package struktura;
 
 public class DanieGlowne extends Zamowienie
 {
-	DanieGlowne(String n, float c, int s, int m)
+	public DanieGlowne(String n, float c, int s, int m)
 	{
 		super(n, c, s, m);
-		// TODO Auto-generated constructor stub
+
 	}
-	int sorowki;
-	int dodatki;
+	
+	public DanieGlowne(String n, float c, int s, int m, String su, float suc, String d, float dc)
+	{
+		super(n, c+suc+dc, s, m);
+		surowka=su;
+		dodatki=d;
+
+	}
+	String surowka;
+	String dodatki;
 
 }

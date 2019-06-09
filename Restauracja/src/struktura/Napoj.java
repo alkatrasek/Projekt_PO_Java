@@ -2,14 +2,10 @@ package struktura;
 
 public class Napoj extends Zamowienie
 {
-	Napoj(String n, float c, int s, int m, float p)
+	public Napoj(String n, float c, int s, int m)
 	{
 		super(n, c, s, m);
-		pojemnosc=p;
-	}
-	
-	
 
-	float pojemnosc;
-	
+	}
+
 }

@@ -26,7 +26,7 @@ public abstract class Zamowienie
 		miejsce=m;
 	}
 	
-	String getNazwa() {return nazwa;}
+	public String getNazwa() {return nazwa;}
 	
 	void setNazwa(String n)
 	{
@@ -35,7 +35,7 @@ public abstract class Zamowienie
 	
 	float getCena() {return cena;}
 	
-	int getStatus() {return status;}
+	public int getStatus() {return status;}
 	
 	void setStatus(int i)
 	{
