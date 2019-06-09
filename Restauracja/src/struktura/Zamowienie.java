@@ -5,19 +5,25 @@ public abstract class Zamowienie
 	String nazwa;
 	float cena;
 	int status;
+	int stolik=0;
+	int miejsce=0;
 	
-	Zamowienie(String n)
+	Zamowienie(String n, int s, int m)
 	{
 		nazwa=n;
 		status=0;
 		cena=0;
+		stolik=s;
+		miejsce=m;
 	}
 	
-	Zamowienie(String n, float c)
+	Zamowienie(String n, float c, int s, int m)
 	{
 		nazwa=n;
 		status=0;
 		cena=c;
+		stolik=s;
+		miejsce=m;
 	}
 	
 	String getNazwa() {return nazwa;}
@@ -36,4 +42,19 @@ public abstract class Zamowienie
 		status=i;
 	}
 	
+	void setMijsce(int s, int m)
+	{
+		stolik=s;
+		miejsce=m;
+	}
+	
+	int getMijsce()
+	{
+		return miejsce;
+	}
+	
+	int getStolik()
+	{
+		return stolik;
+	}
 }

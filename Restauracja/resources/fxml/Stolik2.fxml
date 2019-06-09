@@ -17,10 +17,14 @@
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6d4ff" height="148.0" layoutX="111.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
-            <Circle fill="DODGERBLUE" layoutX="193.0" layoutY="289.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="193.0" layoutY="69.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="321.0" layoutY="69.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="321.0" layoutY="289.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="m3" fill="DODGERBLUE" layoutX="193.0" layoutY="289.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="m1" fill="DODGERBLUE" layoutX="193.0" layoutY="69.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="m2" fill="DODGERBLUE" layoutX="321.0" layoutY="69.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="m4" fill="DODGERBLUE" layoutX="321.0" layoutY="289.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="l1" layoutX="188.0" layoutY="61.0" onMouseClicked="#wyborMiejsca" prefHeight="17.0" prefWidth="14.0" text="1" />
+            <Label fx:id="l2" layoutX="317.0" layoutY="61.0" onMouseClicked="#wyborMiejsca" text="2" />
+            <Label fx:id="l3" layoutX="189.0" layoutY="281.0" onMouseClicked="#wyborMiejsca" text="3" />
+            <Label fx:id="l4" layoutX="317.0" layoutY="281.0" onMouseClicked="#wyborMiejsca" text="4" />
          </children>
       </Pane>
    </center>

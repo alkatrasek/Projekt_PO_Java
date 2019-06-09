@@ -13,15 +13,6 @@
    <top>
       <Label text="Stan stolika" BorderPane.alignment="CENTER" />
    </top>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6d4ff" height="148.0" layoutX="214.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
-            <Circle fill="DODGERBLUE" layoutX="287.0" layoutY="290.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="287.0" layoutY="70.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-         </children>
-      </Pane>
-   </center>
    <right>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,4 +22,15 @@
          </children>
       </VBox>
    </right>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6d4ff" height="148.0" layoutX="214.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+            <Circle fx:id="m2" fill="DODGERBLUE" layoutX="287.0" layoutY="290.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="m1" fill="DODGERBLUE" layoutX="287.0" layoutY="70.0" onMouseClicked="#wyborMiejsca" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="l1" layoutX="284.0" layoutY="62.0" onMouseClicked="#wyborMiejsca" text="1" />
+            <Label fx:id="l2" layoutX="284.0" layoutY="282.0" onMouseClicked="#wyborMiejsca" text="2" />
+         </children>
+      </Pane>
+   </center>
 </BorderPane>
