@@ -3,6 +3,7 @@ package restauracja.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import restauracja.Main;
 import struktura.Osoba;
 
 public class ListaZamowienController
@@ -21,7 +22,8 @@ public class ListaZamowienController
     @FXML
     void initialize()
     {
-    	
+    	//this.listaZamowienTabela.setItems(Main.getOsobaObsevableList());
+    	//this.potrawaZamowieniaKolumna.setCellValueFactory(cellData -> cellData.getValue().zamowienia.get(0).getNazwa());
     }
 
 }

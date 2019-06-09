@@ -40,4 +40,6 @@ public class Osoba
 		if (s=="") return "Wszystkie zamówienia zrealizowane";
 		else return "Nie zrealizowa³eœ: "+s;
 	}
+	
+	
 }

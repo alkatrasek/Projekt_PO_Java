@@ -3,8 +3,11 @@ package restauracja;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import struktura.Osoba;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
@@ -32,4 +35,6 @@ public class Main extends Application
 	{
 		launch(args);
 	}
+	
+	
 }

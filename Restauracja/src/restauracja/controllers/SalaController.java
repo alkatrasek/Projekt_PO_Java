@@ -28,6 +28,23 @@ public class SalaController
 		
 		mainController.setCenterPane(pane);
 	}
+	
+	public void stolikClick2()
+	{
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Stolik2.fxml"));
+		Pane pane=null;
+		try
+		{
+			pane = loader.load();
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		StolikController stolikController = loader.getController();
+		StolikController.setMainController(mainController);
+		
+		mainController.setCenterPane(pane);
+	}
 
 	public void setMainController(MainController mainController)
 	{
