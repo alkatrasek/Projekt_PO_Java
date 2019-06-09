@@ -16,12 +16,12 @@ public class MainController
 	@FXML
 	public void initialize()
 	{
-		loadMainScreen();
+		loadMainScreen("/fxml/Sala.fxml");
 	}
 
-	public void loadMainScreen()
+	public void loadMainScreen(String path)
 	{
-		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Sala.fxml"));
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource(path));
 		Pane sala=null;
 		try
 		{
@@ -31,7 +31,6 @@ public class MainController
 			System.out.println(e);
 		}
 		SalaController salaController = loader.getController();
-		System.out.println();
 		salaController.setMainController(this);
 		setCenterPane(sala);
 	}
@@ -47,5 +46,66 @@ public class MainController
 		Platform.exit();
 		System.exit(0);
 	}
+	
+	@FXML
+	public void loadSala()
+	{
+		loadMainScreen("/fxml/Sala.fxml");
+	}
+	
+	@FXML
+	public void loadKuchnia()
+	{
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Kuchnia.fxml"));
+		Pane pane=null;
+		try
+		{
+			pane = loader.load();
+		} catch (IOException e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		KuchniaController edycjaController = loader.getController();
+		edycjaController.setMainController(this);
+		setCenterPane(pane);
+	}
+	
+	@FXML
+	public void loadStatystyki()
+	{
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Statystyki.fxml"));
+		Pane pane=null;
+		try
+		{
+			pane = loader.load();
+		} catch (IOException e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		StatystykiController edycjaController = loader.getController();
+		edycjaController.setMainController(this);
+		setCenterPane(pane);
+	}
+	
+	@FXML
+	public void loadEdycja()
+	{
+		FXMLLoader loader = new FXMLLoader (this.getClass().getResource("/fxml/Edycja.fxml"));
+		Pane pane=null;
+		try
+		{
+			pane = loader.load();
+		} catch (IOException e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		EdycjaController edycjaController = loader.getController();
+		edycjaController.setMainController(this);
+		setCenterPane(pane);
+	}
+	
 
 }

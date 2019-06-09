@@ -2,19 +2,14 @@ package restauracja.controllers;
 
 import javafx.fxml.FXML;
 
-public class StolikController
+public class StatystykiController
 {
 	private static MainController mainController ;
 	
-	@FXML
-	public void powrot()
-	{
-		mainController.loadMainScreen("/fxml/Sala.fxml");
-	}
 
 	public static void setMainController(MainController mainController)
 	{
-		StolikController.mainController = mainController;
+		StatystykiController.mainController = mainController;
 	}
 	
 	
