@@ -28,32 +28,32 @@ public abstract class Zamowienie
 	
 	public String getNazwa() {return nazwa;}
 	
-	void setNazwa(String n)
+	public void setNazwa(String n)
 	{
 		nazwa=n;
 	}
 	
-	float getCena() {return cena;}
+	public float getCena() {return cena;}
 	
 	public int getStatus() {return status;}
 	
-	void setStatus(int i)
+	public void setStatus(int i)
 	{
 		status=i;
 	}
 	
-	void setMijsce(int s, int m)
+	public void setMiejsce(int s, int m)
 	{
 		stolik=s;
 		miejsce=m;
 	}
 	
-	int getMijsce()
+	public int getMiejsce()
 	{
 		return miejsce;
 	}
 	
-	int getStolik()
+	public int getStolik()
 	{
 		return stolik;
 	}
